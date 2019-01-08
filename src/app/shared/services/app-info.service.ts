@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
-
 @Injectable()
 export class AppInfoService {
-  constructor() {}
-
-  public get title() {
-    return 'Io Management';
-  }
+    constructor() { }
+    public get title() {
+        return 'IO Management';
+    }
 }

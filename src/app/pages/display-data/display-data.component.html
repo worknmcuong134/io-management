@@ -1,18 +1,10 @@
-<h2 class="content-block">Display Data</h2>
-
-<dx-data-grid class="dx-card wide-card"
-    [dataSource]="dataSource"
-    [showBorders]="false"
-    [focusedRowEnabled]="true"
-    [focusedRowIndex]="0"
-    [columnAutoWidth]="true"
-    [columnHidingEnabled]="true">
-
+<h2 class="content-block">Areas</h2>
+<dx-data-grid class="dx-card wide-card" [dataSource]="dataSource" [showBorders]="false" [focusedRowEnabled]="true"
+    [focusedRowIndex]="0" [columnAutoWidth]="true" [columnHidingEnabled]="true" [columns]="['Id', 'Name', 'CV', 'IsCurrent', 'LastUpdated']">
     <dxo-paging [pageSize]="10"></dxo-paging>
     <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
     <dxo-filter-row [visible]="true"></dxo-filter-row>
-
-    <dxi-column
+    <!-- <dxi-column
         dataField="Task_ID"
         [width]="90"
         [hidingPriority]="2">
@@ -65,5 +57,17 @@
         dataField="Task_Completion"
         caption="Completion"
         [hidingPriority]="0">
+    </dxi-column> -->
+    <dxi-column dataField="Id" [width]="100" [hidingPriority]="2">
+    </dxi-column>
+    <dxi-column dataField="Name" [width]="500" caption="NAME" [hidingPriority]="8">
+    </dxi-column>
+    <dxi-column dataField="CV" [width]="100" caption="CV(MJ/Sm3)" [hidingPriority]="6">
+    </dxi-column>
+    <dxi-column dataField="IsCurrent" [width]="100" caption="CURRENT" [hidingPriority]="5">
+        <dxo-lookup [dataSource]="isCurrent" valueExpr="value" displayExpr="name">
+        </dxo-lookup>
+    </dxi-column>
+    <dxi-column dataField="LastUpdated" [width]="200" caption="LAST UPDATED" dataType="date">
     </dxi-column>
 </dx-data-grid>
