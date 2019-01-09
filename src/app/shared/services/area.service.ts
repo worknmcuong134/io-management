@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Area, Areas, UpdatedAreas, DeletedAreas } from '../interfaces/index';
+import { Areas, UpdatedAreas, DeletedAreas } from '../interfaces/areas';
 import * as DecryptorService from './decryptor.service';
 const href = 'http://toddenergy.australiasoutheast.cloudapp.azure.com:8080/areas';
 @Injectable({
