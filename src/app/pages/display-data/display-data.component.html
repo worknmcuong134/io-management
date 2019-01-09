@@ -58,18 +58,18 @@
         caption="Completion"
         [hidingPriority]="0">
     </dxi-column> -->
-    <dxo-editing mode="row" [allowUpdating]="true" [allowDeleting]="true" [allowAdding]="true">
+    <dxo-editing mode="row" [allowUpdating]="true" [allowAdding]="true" [allowDeleting]="true">
     </dxo-editing>
-    <dxi-column dataField="Id" [width]="100" [hidingPriority]="2">
+    <dxi-column dataField="Id" caption="ID" [width]="100" [hidingPriority]="2">
     </dxi-column>
-    <dxi-column dataField="Name" [width]="500" caption="NAME" [hidingPriority]="8">
+    <dxi-column dataField="Name" caption="NAME" [width]="500" [hidingPriority]="8">
     </dxi-column>
-    <dxi-column dataField="CV" [width]="100" caption="CV(MJ/Sm3)" [hidingPriority]="6">
+    <dxi-column dataField="CV" caption="CV(MJ/Sm3)" [width]="100" [hidingPriority]="6">
     </dxi-column>
-    <dxi-column dataField="IsCurrent" [width]="100" caption="CURRENT" [hidingPriority]="5">
+    <dxi-column dataField="IsCurrent" caption="CURRENT" [width]="100" [hidingPriority]="5">
         <dxo-lookup [dataSource]="isCurrent" valueExpr="value" displayExpr="name">
         </dxo-lookup>
     </dxi-column>
-    <dxi-column dataField="LastUpdated" [width]="200" caption="LAST UPDATED" dataType="date">
+    <dxi-column dataField="LastUpdated" caption="LAST UPDATED" [width]="200" dataType="date">
     </dxi-column>
 </dx-data-grid>
